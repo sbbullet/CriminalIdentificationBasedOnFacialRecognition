@@ -1,0 +1,11 @@
+venv/
+*.pyc
+.env
+db.sqlite3
+py3venv/
+py36/
+.vscode/
+py36/*
+py3venv/*
+venv/*
+.vscode/*

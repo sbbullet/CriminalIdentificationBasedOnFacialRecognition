@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Criminal Detector</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<style type="text/css">
+	</style>
+
+</head>
+<body>
+<header>
+	<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Criminal Detector</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+	<br>
+	<br>
+	<br>
+	<div class="row center">
+		<div class="col s12 m6 offset-m3">
+			<select name="cameraId" id="cameraId">
+				<option value="" disabled selected>Choose Camera</option>
+			</select>
+		</div>
+		<div class="col s12 m6 offset-m3">
+			<br><br>	
+			<a id="startBtn" class="btn waves-light waves-effect" href="/detection-zone" target="_blank">Start Live Detection</a>
+			<!-- <a id="stopBtn" class="btn waves-light waves-effect">Stop Live Detection</a> -->
+		</div>
+	</div>
+	<div class="row center">
+		<video id="videoElement" autoplay></video>
+	</div>
+	<div class="row center">
+		<canvas id="canvasElement"></canvas>
+	</div>
+	<div class="row center">
+		<img id="imageElement">
+	</div>
+</main>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
